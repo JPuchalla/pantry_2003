@@ -14,6 +14,6 @@ class PantryTest < Minitest::Test
 
   def test_for_attributes
     assert_equal ({}), @pantry.stock
-
+    assert_equal 0, @pantry.stock_check(@ingredient1)
   end
 end
