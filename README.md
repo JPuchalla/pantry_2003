@@ -15,7 +15,7 @@ NOTE: In order to earn points, methods must be tested appropriately and implemen
 
 ```markdown
 There are **4** Possible Points in Iteration 1:
-1. Ingredient Creation - including all attr_readers 
+1. Ingredient Creation - including all attr_readers
 2. Pantry Creation - including all attr_readers
 3. Pantry #check_stock
 4. Pantry #restock
@@ -170,56 +170,56 @@ pry(main)> ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories:
 pry(main)> recipe1 = Recipe.new("Mac and Cheese")
 # => #<Recipe:0x00007faae69c9698...>
 
-pry(main)> recipe1.add_ingredient(ingredient1, 2)
+ recipe1.add_ingredient(ingredient1, 2)
 
-pry(main)> recipe1.add_ingredient(ingredient2, 8)
+ recipe1.add_ingredient(ingredient2, 8)
 
-pry(main)> ingredient3 = Ingredient.new({name: "Ground Beef", unit: "oz", calories: 100})
+ ingredient3 = Ingredient.new({name: "Ground Beef", unit: "oz", calories: 100})
 # => #<Ingredient:0x00007faae6950860...>
 
-pry(main)> ingredient4 = Ingredient.new({name: "Bun", unit: "g", calories: 75})
+ ingredient4 = Ingredient.new({name: "Bun", unit: "g", calories: 75})
 # => #<Ingredient:0x00007faae694bb80...>
 
-pry(main)> recipe2 = Recipe.new("Cheese Burger")
+ recipe2 = Recipe.new("Cheese Burger")
 # => #<Recipe:0x00007faae692a110...>
 
-pry(main)> recipe2.add_ingredient(ingredient1, 2)
+ recipe2.add_ingredient(ingredient1, 2)
 
-pry(main)> recipe2.add_ingredient(ingredient3, 4)
+ recipe2.add_ingredient(ingredient3, 4)
 
-pry(main)> recipe2.add_ingredient(ingredient4, 1)
+ recipe2.add_ingredient(ingredient4, 1)
 
-pry(main)> recipe1.total_calories
+ recipe1.total_calories
 # => 440
 
-pry(main)> recipe2.total_calories
+ recipe2.total_calories
 # => 675
 
-pry(main)> cookbook.add_recipe(recipe1)
+ cookbook.add_recipe(recipe1)
 
-pry(main)> cookbook.add_recipe(recipe2)
+ cookbook.add_recipe(recipe2)
 
-pry(main)> cookbook.ingredients
+ cookbook.ingredients
 # => ["Cheese", "Macaroni", "Ground Beef", "Bun"]
 
-pry(main)> cookbook.highest_calorie_meal
+ cookbook.highest_calorie_meal
 # => #<Recipe:0x00007faae692a110...>
 
-pry(main)> pantry.restock(ingredient1, 5)
+ pantry.restock(ingredient1, 5)
 
-pry(main)> pantry.restock(ingredient1, 10)
+ pantry.restock(ingredient1, 10)
 
-pry(main)> pantry.enough_ingredients_for?(recipe)
+ pantry.enough_ingredients_for?(recipe)
 # => false
 
-pry(main)> pantry.restock(ingredient2, 7)
+ pantry.restock(ingredient2, 7)
 
-pry(main)> pantry.enough_ingredients_for?(recipe)
+ pantry.enough_ingredients_for?(recipe)
 # => false
 
-pry(main)> pantry.restock(ingredient2, 1)
+ pantry.restock(ingredient2, 1)
 
-pry(main)> pantry.enough_ingredients_for?(recipe)
+ pantry.enough_ingredients_for?(recipe)
 # => true
 ```
 
@@ -236,10 +236,10 @@ Use TDD to build a `CookBook` class that responds to the following interaction p
 For the `summary`, ingredients are listed in order of calories. This is the amount of calories that ingredient contributes to the total calories of the recipe, not the amount of calories per single unit of the ingredient.
 
 ```ruby
-pry(main)> require './lib/cook_book'
+ require './lib/cook_book'
 # => true
 
-pry(main)> require './lib/ingredient'
+ require './lib/ingredient'
 # => true
 
 pry(main)> require './lib/recipe'
