@@ -11,4 +11,14 @@ class Pantry
      end
      stock_number
   end
+
+  def restock(item, quantity)
+    if @stock[item]
+     @stock[item] += quantity
+    else
+     @stock[item] = quantity
+    end
+    @stock[item]
+  end
+
 end
