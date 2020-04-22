@@ -6,6 +6,7 @@ require './lib/pantry'
 class IngredientTest < Minitest::Test
   def setup
     @ingredient1 = Ingredient.new({name: "Cheese", unit: "oz", calories: 50})
+    @ingredient2 = Ingredient.new("Macaroni", "oz", 200)
   end
 
   def test_it_exists
@@ -16,6 +17,5 @@ class IngredientTest < Minitest::Test
     assert_equal "Cheese", @ingredient1.name
     assert_equal "oz", @ingredient1.unit
     assert_equal 50, @ingredient1.calories
-
   end
 end
