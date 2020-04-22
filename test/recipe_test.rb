@@ -29,6 +29,7 @@ class RecipeTest < Minitest::Test
     @recipe1.add_ingredient(@ingredient1, 4)
     @recipe1.add_ingredient(@ingredient2, 8)
     assert_equal ({@ingredient1 => 6, @ingredient2 => 8}), @recipe1.ingredients_required
+    assert_equal [@ingredient1, @ingredient2], @recipe1.ingredients
   end
 
 
