@@ -14,4 +14,11 @@ class CookBook
     end.uniq
   end
 
+  def highest_calorie_meal
+   @recipes.max_by { |recipe| recipe.total_calories }
+  end
+
+  def date
+    Date
+  end
 end
